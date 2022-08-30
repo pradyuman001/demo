@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.updateActivity.view.updateActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/headerLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_42sdp"
+            android:background="#191818"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/backImage"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/rubik_semibold"
+                android:gravity="center"
+                android:layout_marginRight="@dimen/_12sdp"
+                android:text="Update Product"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15ssp" />
+
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/productNameEditTxt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@id/headerLinearLayout"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/custom_edittext"
+            android:drawableStart="@drawable/custom_product_icon"
+            android:drawablePadding="@dimen/_5sdp"
+            android:fontFamily="@font/rubik_regular"
+            android:hint="Product Name"
+            android:inputType="textCapWords"
+            android:maxLength="@integer/material_motion_duration_short_1"
+            android:maxLines="@integer/material_motion_duration_short_1"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:textColorHint="#D5DCE8"
+            android:textSize="@dimen/_15ssp" />
+
+        <EditText
+            android:id="@+id/productPriceEditTxt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@+id/productNameEditTxt"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/custom_edittext"
+            android:drawableStart="@drawable/custom_price_icon"
+            android:drawablePadding="@dimen/_5sdp"
+            android:fontFamily="@font/rubik_regular"
+            android:hint="Product Price"
+            android:inputType="numberDecimal"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:textColorHint="#D5DCE8"
+            android:textSize="@dimen/_15ssp" />
+
+        <EditText
+            android:id="@+id/productDescriptionEditTxt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@+id/productPriceEditTxt"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/custom_edittext"
+            android:drawableStart="@drawable/custom_description_icon"
+            android:drawablePadding="@dimen/_5sdp"
+            android:fontFamily="@font/rubik_regular"
+            android:hint="Product Description"
+            android:inputType="textCapWords"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:textColorHint="#D5DCE8"
+            android:textSize="@dimen/_15ssp" />
+
+        <Spinner
+            android:id="@+id/categorySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@+id/productDescriptionEditTxt"
+            android:elevation="@dimen/_10sdp" />
+
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/productCategoryEditTxt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@+id/productDescriptionEditTxt"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/custom_edittext"
+            android:drawableStart="@drawable/custom_category_icon"
+            android:drawablePadding="@dimen/_5sdp"
+            android:fontFamily="@font/rubik_regular"
+            android:hint="Product Category"
+            android:inputType="textCapWords"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:textColorHint="#D5DCE8"
+            android:textSize="@dimen/_15ssp" />
+
+        <ImageView
+            android:id="@+id/uploadImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_below="@+id/categorySpinner"
+            android:layout_margin="@dimen/_10sdp"
+            android:src="@drawable/image"/>
+
+        <Button
+            android:id="@+id/updateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/uploadImage"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#191818"
+            android:text="Update"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/categoryTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Category For Id :- "
+            android:textSize="@dimen/_15sdp"
+            android:fontFamily="@font/rubik_semibold"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"/>
+
+        <TextView
+            android:id="@+id/categoryNumTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_toEndOf="@id/categoryTxt"
+            android:fontFamily="@font/rubik_bold"
+            android:text="00"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp" />
+
+        <EditText
+            android:id="@+id/categoryIdEditTxt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/custom_edittext"
+            android:drawableStart="@drawable/custom_product_icon"
+            android:drawablePadding="@dimen/_5sdp"
+            android:fontFamily="@font/rubik_regular"
+            android:hint="Category Id"
+            android:inputType="number"
+            android:maxLength="@integer/material_motion_duration_short_1"
+            android:maxLines="@integer/material_motion_duration_short_1"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:textColorHint="#D5DCE8"
+            android:textSize="@dimen/_15ssp"
+            android:layout_below="@id/categoryTxt"/>
+
+        <EditText
+            android:id="@+id/categoryNameEditTxt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@+id/categoryIdEditTxt"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/custom_edittext"
+            android:drawableStart="@drawable/custom_price_icon"
+            android:drawablePadding="@dimen/_5sdp"
+            android:fontFamily="@font/rubik_regular"
+            android:hint="Category Name"
+            android:inputType="textCapWords"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:textColorHint="#D5DCE8"
+            android:textSize="@dimen/_15ssp" />
+
+        <Button
+            android:id="@+id/addCategoryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/categoryNameEditTxt"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#191818"
+            android:text="Add"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

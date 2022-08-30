@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.loginActivity.view.loginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/headerTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/amazon_ember_bold"
+            android:text="LOG IN"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_25ssp" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/loginTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headerTxt"
+            android:layout_margin="@dimen/_10sdp"
+            app:tabIndicator="@drawable/custom_tab_indicator"
+            app:tabIndicatorGravity="bottom"
+            app:tabIndicatorHeight="@dimen/_3sdp"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorAnimationMode="elastic"
+            app:tabIndicatorColor="@color/black"
+            app:tabSelectedTextColor="@color/black" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/loginViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_300sdp"
+            android:layout_below="@id/loginTabLayout" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
