@@ -111,7 +111,6 @@ class productActivity : AppCompatActivity() {
             var categoryIdEditTxt = dialog.findViewById<EditText>(R.id.categoryIdEditTxt)
             var categoryNameEditTxt = dialog.findViewById<EditText>(R.id.categoryNameEditTxt)
             var addCategoryButton = dialog.findViewById<Button>(R.id.addCategoryButton)
-            var categoryTxt = dialog.findViewById<TextView>(R.id.categoryTxt)
             var categoryNumTxt = dialog.findViewById<TextView>(R.id.categoryNumTxt)
 
             databaseReference.child("Category").addValueEventListener(object : ValueEventListener {

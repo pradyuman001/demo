@@ -136,7 +136,7 @@ class insertActivity : AppCompatActivity() {
 
             }
 
-        }.addOnFailureListener { error ->
+        }.addOnFailureListener {
 
             Toast.makeText(this, "Failed Storage", Toast.LENGTH_SHORT).show()
 

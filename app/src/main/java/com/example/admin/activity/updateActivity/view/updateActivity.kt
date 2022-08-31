@@ -132,13 +132,7 @@ class updateActivity : AppCompatActivity() {
                     updateData(temp.toString())
 
                 }
-
-
-            }.addOnFailureListener { error ->
-
-
-
-            }
+            }.addOnFailureListener {}
 
     }
 
