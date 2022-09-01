@@ -18,7 +18,7 @@ class cartAdapter(val activity: cartActivity, val cartList: ArrayList<DBCartProd
     RecyclerView.Adapter<cartAdapter.ViewData>() {
 
 
-    var qua: Int = 0
+    private var minteger: Int = 0
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewData {
         var view = LayoutInflater.from(activity).inflate(R.layout.cart_item, parent, false)
@@ -38,9 +38,27 @@ class cartAdapter(val activity: cartActivity, val cartList: ArrayList<DBCartProd
 
             var temp = cartList.get(position).qua.toInt()
 
-            qua = temp + 1
+            if (temp < 10) {
+                minteger = temp + 1
+                updateQuantity(position, minteger)
 
-            updateQuantity(position, qua)
+            }
+        }
+
+        holder.decrement.setOnClickListener {
+
+            var temp = cartList.get(position).qua.toInt()
+
+
+            if (temp > 1) {
+                minteger = temp - 1
+                updateQuantity(position, minteger)
+            }
+        }
+
+        holder.deleteImageView.setOnClickListener {
+
+            deleteData(position)
 
         }
     }
@@ -70,7 +88,23 @@ class cartAdapter(val activity: cartActivity, val cartList: ArrayList<DBCartProd
         )
 
 
-        databaseReference.child("Cart").child(uid.toString()).child("${cartList.get(position).key}").setValue(up)
+        databaseReference.child("Cart").child(uid.toString()).child("${cartList.get(position).key}")
+            .setValue(up)
+
+    }
+
+    private fun deleteData(position: Int) {
+
+        var firebaseDatabase = FirebaseDatabase.getInstance()
+        var databaseReference = firebaseDatabase.reference
+
+        var firebaseAuth = FirebaseAuth.getInstance()
+        var currentUser = firebaseAuth.currentUser
+        var uid = currentUser?.uid
+
+        databaseReference.child("Cart").child(uid.toString()).child("${cartList.get(position).key}").removeValue()
+
+        cartList.clear()
 
     }
 
@@ -85,6 +119,7 @@ class cartAdapter(val activity: cartActivity, val cartList: ArrayList<DBCartProd
         var increment = itemView.findViewById<ImageView>(R.id.increment)
         var decrement = itemView.findViewById<ImageView>(R.id.decrement)
         var Quntiity = itemView.findViewById<TextView>(R.id.Quntiity)
+        var deleteImageView = itemView.findViewById<ImageView>(R.id.deleteImageView)
 
 
     }

@@ -47,7 +47,7 @@ class productAdpater(
             intent.putExtra("n1",productInsertList[position].pname)
             intent.putExtra("n2",productInsertList[position].pprice)
             intent.putExtra("n3",productInsertList[position].pdes)
-            intent.putExtra("n4",productInsertList[position].pcat)
+            intent.putExtra("n4",productInsertList[position].pdis)
             intent.putExtra("n5",productInsertList[position].pimage)
             intent.putExtra("n6",productInsertList[position].key)
             intent.putExtra("n7",productInsertList[position].cid)

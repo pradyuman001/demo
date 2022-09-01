@@ -7,4 +7,5 @@ data class DBInsertProduct(
     val pcat: String,
     val cid : Int,
     val pimage : String,
+    val pdis : String
 )

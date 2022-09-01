@@ -82,7 +82,7 @@
             android:id="@+id/productDescriptionEditTxt"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_40sdp"
-            android:layout_below="@+id/productPriceEditTxt"
+            android:layout_below="@+id/spinnerFrameLayout"
             android:layout_marginLeft="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginRight="@dimen/_10sdp"
@@ -97,11 +97,30 @@
             android:textColorHint="#D5DCE8"
             android:textSize="@dimen/_15ssp" />
 
+        <EditText
+            android:id="@+id/productDiscountEditTxt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@+id/productPriceEditTxt"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:background="@drawable/custom_edittext"
+            android:drawableStart="@drawable/custom_discount_icon"
+            android:drawablePadding="@dimen/_5sdp"
+            android:fontFamily="@font/rubik_regular"
+            android:hint="Product Discount"
+            android:inputType="numberDecimal"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:textColorHint="#D5DCE8"
+            android:textSize="@dimen/_15ssp" />
+
         <TextView
             android:id="@+id/categoryErrorTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/productDescriptionEditTxt"
+            android:layout_below="@id/productDiscountEditTxt"
             android:layout_marginLeft="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
             android:text="Please Select A Category"
@@ -147,7 +166,7 @@
             android:id="@+id/imgErrorTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/spinnerFrameLayout"
+            android:layout_below="@id/productDescriptionEditTxt"
             android:layout_marginLeft="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
             android:text="Please Select Image"
@@ -165,7 +184,7 @@
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/_10sdp"
             android:layout_marginBottom="@dimen/_10sdp"
-            android:src="@drawable/image"/>
+            android:src="@drawable/image" />
 
         <Button
             android:id="@+id/insertButton"

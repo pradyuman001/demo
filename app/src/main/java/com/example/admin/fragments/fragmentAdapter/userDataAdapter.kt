@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
@@ -38,8 +39,6 @@ class userDataAdapter(val activity: FragmentActivity?, val productList: ArrayLis
 
         holder.cartCardView.setOnClickListener {
 
-            //addToCart(position)
-
             add(position)
 
         }
@@ -47,32 +46,6 @@ class userDataAdapter(val activity: FragmentActivity?, val productList: ArrayLis
 
     override fun getItemCount(): Int {
         return productList.size
-    }
-
-    private fun addToCart(position: Int) {
-
-        var firebaseDatabase = FirebaseDatabase.getInstance()
-        var databaseReference = firebaseDatabase.reference
-
-        var firebaseAuth = FirebaseAuth.getInstance()
-        var user = firebaseAuth.currentUser
-        var uid = user?.uid
-
-        var cartData = DBInsertProduct(
-            productList[position].pname,
-            productList[position].pprice,
-            productList[position].pdes,
-            productList[position].pcat,
-            productList[position].cid.toInt(),
-            productList[position].pimage,
-
-        )
-
-        databaseReference.child("Cart").child(uid.toString()).push().setValue(cartData)
-
-        var intent = Intent(activity,cartActivity::class.java)
-        activity?.startActivity(intent)
-
     }
 
     private fun add(position: Int) {

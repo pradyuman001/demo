@@ -8,5 +8,6 @@ data class DBReadProduct(
     val pcat : String,
     val pimage: String,
     val key: String,
-    val cid : String
+    val cid : String,
+    val pdis : String
 )

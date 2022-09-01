@@ -63,7 +63,7 @@ class updateActivity : AppCompatActivity() {
         val name = intent.getStringExtra("n1")
         val price = intent.getStringExtra("n2")
         val des = intent.getStringExtra("n3")
-        val cat = intent.getStringExtra("n4")
+        val dis = intent.getStringExtra("n4")
         image = intent.getStringExtra("n5").toString()
         id = intent.getStringExtra("n7")
 
@@ -74,7 +74,7 @@ class updateActivity : AppCompatActivity() {
         binding.productNameEditTxt.setText(name)
         binding.productPriceEditTxt.setText(price)
         binding.productDescriptionEditTxt.setText(des)
-        binding.productCategoryEditTxt.setText(cat)
+        binding.productDiscountEditTxt.setText(dis)
         Glide.with(this).load(image).into(binding.uploadImage)
 
 
@@ -149,7 +149,8 @@ class updateActivity : AppCompatActivity() {
             binding.productDescriptionEditTxt.text.toString(),
             category,
             cid!!,
-            uri
+            uri,
+            binding.productDiscountEditTxt.text.toString()
         )
 
         databaseReference.child("Product").child(key!!).setValue(productData)

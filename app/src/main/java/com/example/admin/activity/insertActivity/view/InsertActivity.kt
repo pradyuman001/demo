@@ -77,12 +77,11 @@ class insertActivity : AppCompatActivity() {
 
 
             image = data?.data!!
-            if(image!=null){
+            if (image != null) {
 
                 binding.imgErrorTxt.isVisible = false
             }
             binding.uploadImage.setImageURI(image)
-
 
 
         }
@@ -105,11 +104,15 @@ class insertActivity : AppCompatActivity() {
 
                 binding.productDescriptionEditTxt.error = "Product Description Required"
 
+            } else if (binding.productDiscountEditTxt.length() == 0) {
+
+                binding.productDiscountEditTxt.error = "Product Discount Required"
+
             } else if (category == null) {
 
                 binding.categoryErrorTxt.isVisible = true
 
-            }  else {
+            } else {
                 uploadImageToStorage()
             }
         }
@@ -154,7 +157,8 @@ class insertActivity : AppCompatActivity() {
             binding.productDescriptionEditTxt.text.toString(),
             category,
             cid!!,
-            uri.toString()
+            uri.toString(),
+            binding.productDiscountEditTxt.text.toString()
         )
 
         databaseReference.child("Product").push().setValue(productData)

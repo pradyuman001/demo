@@ -192,8 +192,15 @@
                         android:layout_height="@dimen/_15sdp"
                         android:layout_margin="@dimen/_5sdp"
                         android:layout_toEndOf="@id/Quntiity"
-                        android:src="@drawable/p" />
+                        android:src="@drawable/p"/>
 
+                    <ImageView
+                        android:id="@+id/deleteImageView"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/delete"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_alignParentEnd="true"/>
 
                 </RelativeLayout>
 

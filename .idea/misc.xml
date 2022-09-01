@@ -9,10 +9,13 @@
         <entry key="..\:/Admin/app/src/main/res/drawable-v24/categoty.xml" value="0.1" />
         <entry key="..\:/Admin/app/src/main/res/drawable-v24/custom_category_icon.xml" value="0.1" />
         <entry key="..\:/Admin/app/src/main/res/drawable-v24/custom_description_icon.xml" value="0.1" />
+        <entry key="..\:/Admin/app/src/main/res/drawable-v24/custom_discount_icon.xml" value="0.1" />
         <entry key="..\:/Admin/app/src/main/res/drawable-v24/custom_price_icon.xml" value="0.1" />
         <entry key="..\:/Admin/app/src/main/res/drawable-v24/custom_product_icon.xml" value="0.1" />
         <entry key="..\:/Admin/app/src/main/res/drawable-v24/description.xml" value="0.1" />
         <entry key="..\:/Admin/app/src/main/res/drawable-v24/description_dark.xml" value="0.1" />
+        <entry key="..\:/Admin/app/src/main/res/drawable-v24/discount.xml" value="0.1" />
+        <entry key="..\:/Admin/app/src/main/res/drawable-v24/discount_dark.xml" value="0.1" />
         <entry key="..\:/Admin/app/src/main/res/drawable-v24/home.xml" value="0.1" />
         <entry key="..\:/Admin/app/src/main/res/drawable-v24/product.xml" value="0.1" />
         <entry key="..\:/Admin/app/src/main/res/drawable-v24/product_dark.xml" value="0.1" />
@@ -40,7 +43,7 @@
         <entry key="..\:/Admin/app/src/main/res/layout/activity_product.xml" value="0.176" />
         <entry key="..\:/Admin/app/src/main/res/layout/activity_search.xml" value="0.25" />
         <entry key="..\:/Admin/app/src/main/res/layout/activity_update.xml" value="0.25" />
-        <entry key="..\:/Admin/app/src/main/res/layout/cart_item.xml" value="0.25" />
+        <entry key="..\:/Admin/app/src/main/res/layout/cart_item.xml" value="0.264" />
         <entry key="..\:/Admin/app/src/main/res/layout/fragment_admin.xml" value="0.25" />
         <entry key="..\:/Admin/app/src/main/res/layout/fragment_admin_login.xml" value="0.25" />
         <entry key="..\:/Admin/app/src/main/res/layout/fragment_category.xml" value="0.2359375" />

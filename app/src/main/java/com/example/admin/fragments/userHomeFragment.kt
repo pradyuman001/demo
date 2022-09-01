@@ -57,8 +57,9 @@ class userHomeFragment : Fragment() {
                     var pimage = x.child("pimage").getValue().toString()
                     var cid = x.child("cid").getValue().toString()
                     var key = x.key.toString()
+                    var pdis = x.child("pdis").getValue().toString()
 
-                    var productData = DBReadProduct(id, pname, pprice, pdes, pcat, pimage, key, cid)
+                    var productData = DBReadProduct(id, pname, pprice, pdes, pcat, pimage, key, cid,pdis)
 
                     productList.add(productData)
                 }
