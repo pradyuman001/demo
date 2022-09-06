@@ -36,7 +36,6 @@ class cartActivity : AppCompatActivity() {
             var intent = Intent(this,billActivity::class.java)
             startActivity(intent)
 
-
         }
     }
 
