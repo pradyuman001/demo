@@ -32,6 +32,7 @@ class productAdpater(
         holder.productPriceTxt.setText(productInsertList[position].pprice)
         holder.productDescriptionTxt.setText(productInsertList[position].pdes)
         holder.productCategoryTxt.setText(productInsertList[position].pcat)
+        holder.productDiscountTxt.setText(productInsertList[position].pdis)
         Glide.with(activity).load(productInsertList[position].pimage).into(holder.productImg)
 
         holder.deleteCardView.setOnClickListener {
@@ -67,6 +68,7 @@ class productAdpater(
         var productNameTxt = itemView.findViewById<TextView>(R.id.productNameTxt)
         var productPriceTxt = itemView.findViewById<TextView>(R.id.productPriceTxt)
         var productDescriptionTxt = itemView.findViewById<TextView>(R.id.productDescriptionTxt)
+        var productDiscountTxt = itemView.findViewById<TextView>(R.id.productDiscountTxt)
         var productCategoryTxt = itemView.findViewById<TextView>(R.id.productCategoryTxt)
         var productImg = itemView.findViewById<ImageView>(R.id.productImg)
         var deleteCardView = itemView.findViewById<CardView>(R.id.deleteCardView)

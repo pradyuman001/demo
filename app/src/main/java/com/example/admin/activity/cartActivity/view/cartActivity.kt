@@ -1,8 +1,10 @@
 package com.example.admin.activity.cartActivity.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.admin.activity.billActivity.view.billActivity
 import com.example.admin.activity.cartActivity.controller.cartAdapter
 import com.example.admin.databinding.ActivityCartBinding
 import com.example.admin.utils.DBCartProduct
@@ -24,6 +26,18 @@ class cartActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         readProductData()
+
+        buyProduct()
+    }
+
+    private fun buyProduct() {
+        binding.buyButton.setOnClickListener {
+
+            var intent = Intent(this,billActivity::class.java)
+            startActivity(intent)
+
+
+        }
     }
 
     private fun readProductData() {
@@ -75,7 +89,5 @@ class cartActivity : AppCompatActivity() {
         binding.cartRecyclerView.layoutManager = layoutManager
 
     }
-
-
 
 }

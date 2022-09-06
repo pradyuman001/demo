@@ -64,6 +64,49 @@
                     android:textColor="@color/black"
                     android:textSize="@dimen/_10sdp" />
 
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/productNameTxt"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:layout_toEndOf="@id/productPriceTxt"
+                    app:cardBackgroundColor="#03B50A">
+
+                    <TextView
+                        android:id="@+id/productDiscountTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:fontFamily="@font/rubik_medium"
+                        android:text="30"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/productperTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/rubik_bold"
+                        android:text="%"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/productoffTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:fontFamily="@font/rubik_light"
+                        android:text="off"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+
+                </com.google.android.material.card.MaterialCardView>
+
                 <TextView
                     android:id="@+id/productDescriptionTxt"
                     android:layout_width="wrap_content"

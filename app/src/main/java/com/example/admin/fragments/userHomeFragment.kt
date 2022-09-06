@@ -14,12 +14,12 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
 
 class userHomeFragment : Fragment() {
 
     lateinit var binding : FragmentUserHomeBinding
     val productList = arrayListOf<DBReadProduct>()
-
 
 
     override fun onCreateView(
@@ -28,10 +28,8 @@ class userHomeFragment : Fragment() {
     ): View? {
         binding = FragmentUserHomeBinding.inflate(layoutInflater)
 
+
         readProductData()
-
-        //imageSlider()
-
 
         return binding.root
     }
@@ -82,6 +80,8 @@ class userHomeFragment : Fragment() {
         binding.recyclerView.layoutManager = layoutManager
 
     }
+
+
 
 
 }
