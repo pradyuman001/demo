@@ -49,7 +49,6 @@ class cartAdapter(val activity: cartActivity, val cartList: ArrayList<DBCartProd
 
             var temp = cartList.get(position).qua.toInt()
 
-
             if (temp > 1) {
                 minteger = temp - 1
                 updateQuantity(position, minteger)

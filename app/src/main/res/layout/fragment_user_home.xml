@@ -6,15 +6,48 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.userHomeFragment">
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_5sdp"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginEnd="@dimen/_5sdp"
-        android:layout_marginBottom="@dimen/_5sdp" />
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/imageSliderRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp">
+
+                <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                    android:id="@+id/carousel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:autoPlay="true"
+                    app:autoPlayDelay="3000"
+                    app:autoWidthFixing="true"
+                    app:infiniteCarousel="true"
+                    app:scaleOnScroll="true"
+                    app:scalingFactor="0.10"
+                    app:showBottomShadow="false"
+                    app:showNavigationButtons="false"
+                    app:showTopShadow="false" />
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/imageSliderRelativeLayout"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 
 </RelativeLayout>

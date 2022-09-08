@@ -1,10 +1,11 @@
 package com.example.admin.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.admin.R
 import com.example.admin.databinding.FragmentUserHomeBinding
@@ -18,7 +19,7 @@ import org.imaginativeworld.whynotimagecarousel.model.CarouselItem
 
 class userHomeFragment : Fragment() {
 
-    lateinit var binding : FragmentUserHomeBinding
+    lateinit var binding: FragmentUserHomeBinding
     val productList = arrayListOf<DBReadProduct>()
 
 
@@ -28,10 +29,31 @@ class userHomeFragment : Fragment() {
     ): View? {
         binding = FragmentUserHomeBinding.inflate(layoutInflater)
 
-
+        imageSlider()
         readProductData()
 
         return binding.root
+    }
+
+    private fun imageSlider() {
+
+        binding.carousel.registerLifecycle(lifecycle)
+
+        val list = mutableListOf<CarouselItem>()
+
+        list.add(
+            CarouselItem(
+                imageDrawable = R.drawable.one,
+            )
+        )
+
+        list.add(
+            CarouselItem(
+                imageDrawable = R.drawable.two
+            )
+        )
+
+        binding.carousel.setData(list)
     }
 
     private fun readProductData() {
@@ -57,7 +79,10 @@ class userHomeFragment : Fragment() {
                     var key = x.key.toString()
                     var pdis = x.child("pdis").getValue().toString()
 
-                    var productData = DBReadProduct(id, pname, pprice, pdes, pcat, pimage, key, cid,pdis)
+                    var productData =
+                        DBReadProduct(id, pname, pprice, pdes, pcat, pimage, key, cid, pdis)
+
+
 
                     productList.add(productData)
                 }
@@ -76,12 +101,10 @@ class userHomeFragment : Fragment() {
 
         var adpater = userDataAdapter(activity, productList)
         var layoutManager = LinearLayoutManager(activity)
-        binding.recyclerView.adapter = adpater
-        binding.recyclerView.layoutManager = layoutManager
+        binding.recyclerView1.adapter = adpater
+        binding.recyclerView1.layoutManager = layoutManager
 
     }
-
-
 
 
 }

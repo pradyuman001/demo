@@ -22,11 +22,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="?android:attr/windowBackground"
-        android:scrollbarSize="@dimen/_5sdp"
-        app:itemIconSize="@dimen/_17sdp"
+        android:scrollbarSize="@dimen/_1sdp"
+        app:itemIconSize="@dimen/_13sdp"
         app:itemTextAppearanceActive="@style/NewFontStyle"
         app:labelVisibilityMode="labeled"
-        app:menu="@menu/bottom_navigation" />
+        app:menu="@menu/bottom_navigation"/>
 
 
 

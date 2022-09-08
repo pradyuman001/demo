@@ -11,7 +11,7 @@ import com.example.admin.R
 import com.example.admin.activity.billActivity.view.billActivity
 import com.example.admin.utils.DBCartProduct
 
-class billAdapter(val activity: billActivity,val billList: ArrayList<DBCartProduct>) : RecyclerView.Adapter<billAdapter.ViewData>(){
+class billAdapter(val activity: billActivity, val billList: ArrayList<DBCartProduct>) : RecyclerView.Adapter<billAdapter.ViewData>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewData {
 

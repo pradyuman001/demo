@@ -1,24 +1,24 @@
 package com.example.admin.activity.cartActivity.view
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.admin.activity.billActivity.view.billActivity
 import com.example.admin.activity.cartActivity.controller.cartAdapter
 import com.example.admin.databinding.ActivityCartBinding
 import com.example.admin.utils.DBCartProduct
-import com.example.admin.utils.DBTemp
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.*
+import com.example.admin.R
+
 
 class cartActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityCartBinding
     val cartList = arrayListOf<DBCartProduct>()
+    var total : Int = 0
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,8 +33,11 @@ class cartActivity : AppCompatActivity() {
     private fun buyProduct() {
         binding.buyButton.setOnClickListener {
 
-            var intent = Intent(this,billActivity::class.java)
-            startActivity(intent)
+
+            bottomNavigation()
+
+//            var intent = Intent(this,billActivity::class.java)
+//            startActivity(intent)
 
         }
     }
@@ -52,6 +55,7 @@ class cartActivity : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
 
                 cartList.clear()
+                total=0;
 
                 for (x in snapshot.children) {
 
@@ -67,14 +71,22 @@ class cartActivity : AppCompatActivity() {
                     var key = x.key.toString()
 
                     var productData = DBCartProduct(id, pname, pprice, pdes, pcat, pimage, key, cid,qua)
+
+
+                    total = (pprice!!.toInt()*qua.toInt()) + total
+
                     cartList.add(productData)
                 }
+
+
+                Toast.makeText(this@cartActivity, "$total", Toast.LENGTH_SHORT).show()
+
 
                 setProductData(cartList)
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+
             }
         })
 
@@ -86,6 +98,16 @@ class cartActivity : AppCompatActivity() {
         var layoutManager = LinearLayoutManager(this)
         binding.cartRecyclerView.adapter = adpater
         binding.cartRecyclerView.layoutManager = layoutManager
+
+    }
+
+    private fun bottomNavigation(){
+
+       var dialog  = BottomSheetDialog(this)
+        dialog.setContentView(R.layout.dialog_bottomsheet)
+
+        dialog.show()
+
 
     }
 

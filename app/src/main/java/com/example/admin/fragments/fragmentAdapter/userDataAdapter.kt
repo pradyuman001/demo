@@ -23,7 +23,6 @@ class userDataAdapter(val activity: FragmentActivity?, val productList: ArrayLis
 
     RecyclerView.Adapter<ViewData>() {
 
-    var quaList  = arrayListOf<DBTemp>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewData {
         var view = LayoutInflater.from(activity).inflate(R.layout.product_item, parent, false)
