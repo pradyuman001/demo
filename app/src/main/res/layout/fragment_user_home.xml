@@ -11,13 +11,80 @@
         android:layout_height="match_parent">
 
         <RelativeLayout
+
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/headerCardView"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:layout_margin="@dimen/_2sdp">
+
+                    <ImageView
+                        android:id="@+id/menuImageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:backgroundTint="@color/white"
+                        android:foregroundGravity="center"
+                        android:src="@drawable/ic_round_menu_22" />
+
+                    <TextView
+                        android:id="@+id/HeadingText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/menuImageView"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/_25sdp"
+                        android:fontFamily="@font/rubik_regular"
+                        android:text="Quick Shopper"
+                        android:textColor="#FEC200"
+                        android:textSize="@dimen/_14sdp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/searchImageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_70sdp"
+                        android:src="@drawable/search_24" />
+
+                    <ImageView
+                        android:id="@+id/wishlistImageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_40sdp"
+                        android:src="@drawable/heart_24" />
+
+
+                    <ImageView
+                        android:id="@+id/Notification"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:src="@drawable/notification" />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
 
             <RelativeLayout
                 android:id="@+id/imageSliderRelativeLayout"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_120sdp">
+                android:layout_height="@dimen/_120sdp"
+                android:layout_below="@+id/headerCardView"
+                android:layout_marginTop="@dimen/_5sdp">
 
                 <org.imaginativeworld.whynotimagecarousel.ImageCarousel
                     android:id="@+id/carousel"

@@ -10,7 +10,7 @@ import com.bumptech.glide.Glide
 import com.example.admin.R
 import com.example.admin.activity.cartActivity.view.cartActivity
 import com.example.admin.utils.DBCartProduct
-import com.example.admin.utils.DBTemp
+import com.example.admin.utils.DBCart
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 
@@ -76,7 +76,7 @@ class cartAdapter(val activity: cartActivity, val cartList: ArrayList<DBCartProd
         var uid = currentUser?.uid
 
 
-        var up = DBTemp(
+        var up = DBCart(
             cartList.get(position).pname,
             cartList.get(position).pprice,
             cartList.get(position).pdes,

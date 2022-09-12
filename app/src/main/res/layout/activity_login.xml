@@ -18,7 +18,7 @@
             android:layout_centerHorizontal="true"
             android:fontFamily="@font/amazon_ember_bold"
             android:text="LOG IN"
-            android:textColor="@color/black"
+            android:textColor="#FEC200"
             android:textSize="@dimen/_25ssp" />
 
         <com.google.android.material.tabs.TabLayout
@@ -32,7 +32,7 @@
             app:tabIndicatorHeight="@dimen/_3sdp"
             app:tabIndicatorFullWidth="false"
             app:tabIndicatorAnimationMode="elastic"
-            app:tabIndicatorColor="@color/black"
+            app:tabIndicatorColor="#FEC200"
             app:tabSelectedTextColor="@color/black" />
 
         <androidx.viewpager.widget.ViewPager

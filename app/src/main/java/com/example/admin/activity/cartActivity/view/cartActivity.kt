@@ -59,7 +59,6 @@ class cartActivity : AppCompatActivity() {
 
                 for (x in snapshot.children) {
 
-
                     var id = x.child("pid").getValue().toString()
                     var pname = x.child("pname").getValue().toString()
                     var pprice = x.child("pprice").getValue().toString()
@@ -72,15 +71,12 @@ class cartActivity : AppCompatActivity() {
 
                     var productData = DBCartProduct(id, pname, pprice, pdes, pcat, pimage, key, cid,qua)
 
-
                     total = (pprice!!.toInt()*qua.toInt()) + total
 
                     cartList.add(productData)
                 }
 
-
-                Toast.makeText(this@cartActivity, "$total", Toast.LENGTH_SHORT).show()
-
+                binding.totalTxt.setText(total.toString())
 
                 setProductData(cartList)
             }

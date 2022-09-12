@@ -5,12 +5,9 @@
     android:layout_height="match_parent"
     tools:context=".fragments.userCategoryFragment">
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categoryFragmentRecyclerView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="User Category Fragment"
-        android:layout_centerInParent="true"
-        android:textSize="@dimen/_25ssp"/>
-
+        android:layout_height="wrap_content"/>
 
 </RelativeLayout>

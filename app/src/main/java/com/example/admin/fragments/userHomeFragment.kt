@@ -1,5 +1,6 @@
 package com.example.admin.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.admin.R
+import com.example.admin.activity.searchActivity.view.searchActivity
 import com.example.admin.databinding.FragmentUserHomeBinding
 import com.example.admin.fragments.fragmentAdapter.userDataAdapter
 import com.example.admin.utils.DBReadProduct
@@ -31,8 +33,17 @@ class userHomeFragment : Fragment() {
 
         imageSlider()
         readProductData()
+        search()
 
         return binding.root
+    }
+
+    private fun search() {
+        binding.searchImageView.setOnClickListener {
+            var intent = Intent(activity,searchActivity::class.java)
+            startActivity(intent)
+
+        }
     }
 
     private fun imageSlider() {
@@ -57,6 +68,7 @@ class userHomeFragment : Fragment() {
     }
 
     private fun readProductData() {
+
 
         var firebaseDatabase = FirebaseDatabase.getInstance()
         var databaseReference = firebaseDatabase.reference

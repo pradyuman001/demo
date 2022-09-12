@@ -6,16 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.admin.R
 import com.example.admin.activity.cartActivity.view.cartActivity
-import com.example.admin.utils.DBInsertProduct
 import com.example.admin.utils.DBReadProduct
-import com.example.admin.utils.DBTemp
+import com.example.admin.utils.DBCart
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 
@@ -56,7 +54,7 @@ class userDataAdapter(val activity: FragmentActivity?, val productList: ArrayLis
         var user = firebaseAuth.currentUser
         var uid = user?.uid
 
-        var cartData = DBTemp(
+        var cartData = DBCart(
             productList[position].pname,
             productList[position].pprice,
             productList[position].pdes,

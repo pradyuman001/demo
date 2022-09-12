@@ -1,6 +1,6 @@
 package com.example.admin.utils
 
-data class DBTemp(
+data class DBCart(
     val pname: String,
     val pprice: String,
     val pdes: String,

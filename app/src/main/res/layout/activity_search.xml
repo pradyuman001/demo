@@ -6,11 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".activity.searchActivity.view.searchActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Search Activity"
-        android:layout_centerInParent="true"
-        android:textSize="@dimen/_25ssp"/>
+   <androidx.cardview.widget.CardView
+       android:id="@+id/headerCardView"
+       android:layout_width="match_parent"
+       android:layout_height="?actionBarSize">
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="?actionBarSize"
+          android:layout_margin="@dimen/_2sdp">
+
+         <ImageView
+             android:id="@+id/searchImageView"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerVertical="true"
+             android:layout_marginLeft="@dimen/_5sdp"
+             android:backgroundTint="@color/white"
+             android:foregroundGravity="center"
+             android:src="@drawable/search" />
+
+         <EditText
+             android:id="@+id/searchEditText"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:hint="Search"
+             android:layout_toEndOf="@id/searchImageView"/>
+
+         <ImageView
+             android:id="@+id/Notification"
+             android:layout_width="@dimen/_20sdp"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_marginRight="@dimen/_10sdp"
+             android:src="@drawable/notification" />
+
+
+      </RelativeLayout>
+   </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

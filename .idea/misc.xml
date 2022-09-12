@@ -29,29 +29,37 @@
         <entry key="..\:/Admin/app/src/main/res/drawable/custom_button_2.xml" value="0.1" />
         <entry key="..\:/Admin/app/src/main/res/drawable/custom_edittext.xml" value="0.1" />
         <entry key="..\:/Admin/app/src/main/res/drawable/custom_email_icon.xml" value="0.1" />
+        <entry key="..\:/Admin/app/src/main/res/drawable/custom_fullname_icon.xml" value="0.1" />
         <entry key="..\:/Admin/app/src/main/res/drawable/custom_password_icon.xml" value="0.1" />
+        <entry key="..\:/Admin/app/src/main/res/drawable/custom_phone_icon.xml" value="0.1" />
         <entry key="..\:/Admin/app/src/main/res/drawable/custom_tab_indicator.xml" value="0.1" />
         <entry key="..\:/Admin/app/src/main/res/drawable/custom_username_icon.xml" value="0.1" />
         <entry key="..\:/Admin/app/src/main/res/drawable/email.xml" value="0.1" />
         <entry key="..\:/Admin/app/src/main/res/drawable/email_dark.xml" value="0.1" />
+        <entry key="..\:/Admin/app/src/main/res/drawable/fullname.xml" value="0.1" />
+        <entry key="..\:/Admin/app/src/main/res/drawable/heart_24.xml" value="0.1" />
+        <entry key="..\:/Admin/app/src/main/res/drawable/ic_round_menu_22.xml" value="0.1" />
         <entry key="..\:/Admin/app/src/main/res/drawable/password.xml" value="0.1" />
         <entry key="..\:/Admin/app/src/main/res/drawable/password_dark.xml" value="0.1" />
+        <entry key="..\:/Admin/app/src/main/res/drawable/search_24.xml" value="0.1" />
         <entry key="..\:/Admin/app/src/main/res/drawable/user.xml" value="0.1" />
+        <entry key="..\:/Admin/app/src/main/res/drawable/user_dark.xml" value="0.1" />
         <entry key="..\:/Admin/app/src/main/res/layout/activity_bill.xml" value="0.25" />
-        <entry key="..\:/Admin/app/src/main/res/layout/activity_cart.xml" value="0.2359375" />
+        <entry key="..\:/Admin/app/src/main/res/layout/activity_cart.xml" value="0.2" />
         <entry key="..\:/Admin/app/src/main/res/layout/activity_insert.xml" value="0.2" />
         <entry key="..\:/Admin/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Admin/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Admin/app/src/main/res/layout/activity_product.xml" value="0.176" />
-        <entry key="..\:/Admin/app/src/main/res/layout/activity_search.xml" value="0.25" />
+        <entry key="..\:/Admin/app/src/main/res/layout/activity_search.xml" value="0.2" />
         <entry key="..\:/Admin/app/src/main/res/layout/activity_signing.xml" value="0.2" />
         <entry key="..\:/Admin/app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
         <entry key="..\:/Admin/app/src/main/res/layout/activity_update.xml" value="0.25" />
         <entry key="..\:/Admin/app/src/main/res/layout/cart_item.xml" value="0.264" />
+        <entry key="..\:/Admin/app/src/main/res/layout/categoty_item.xml" value="0.24895833333333334" />
         <entry key="..\:/Admin/app/src/main/res/layout/dialog_bottomsheet.xml" value="0.25" />
         <entry key="..\:/Admin/app/src/main/res/layout/fragment_admin.xml" value="0.25" />
         <entry key="..\:/Admin/app/src/main/res/layout/fragment_admin_login.xml" value="0.25" />
-        <entry key="..\:/Admin/app/src/main/res/layout/fragment_category.xml" value="0.2359375" />
+        <entry key="..\:/Admin/app/src/main/res/layout/fragment_category.xml" value="0.2" />
         <entry key="..\:/Admin/app/src/main/res/layout/fragment_user.xml" value="0.25" />
         <entry key="..\:/Admin/app/src/main/res/layout/fragment_user_home.xml" value="0.2" />
         <entry key="..\:/Admin/app/src/main/res/layout/fragment_user_login.xml" value="0.2" />
