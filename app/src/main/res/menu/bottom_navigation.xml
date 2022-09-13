@@ -10,9 +10,9 @@
         android:icon="@drawable/category"
         android:title="Category"/>
     <item
-        android:id="@+id/searchImg"
-        android:icon="@drawable/search"
-        android:title="Search" />
+        android:id="@+id/wishlistImg"
+        android:icon="@drawable/heart_24"
+        android:title="WishList" />
     <item
         android:id="@+id/cartImg"
         android:icon="@drawable/cart"

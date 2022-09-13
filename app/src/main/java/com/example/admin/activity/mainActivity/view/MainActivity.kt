@@ -12,6 +12,7 @@ import com.example.admin.databinding.ActivityMainBinding
 import com.example.admin.fragments.userCategoryFragment
 import com.example.admin.fragments.userHomeFragment
 import com.example.admin.fragments.useraccountFragment
+import com.example.admin.fragments.wishlistFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -30,7 +31,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.homeImg -> loadFragment(userHomeFragment())
                 R.id.categoryImg -> loadFragment(userCategoryFragment())
                 R.id.userImg -> loadFragment(useraccountFragment())
-                R.id.searchImg -> changeActivity(searchActivity())
+                R.id.wishlistImg -> loadFragment(wishlistFragment())
                 R.id.cartImg -> changeActivity(cartActivity())
             }
             true

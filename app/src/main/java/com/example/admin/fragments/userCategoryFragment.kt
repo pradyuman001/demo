@@ -16,18 +16,27 @@ import com.google.firebase.database.ValueEventListener
 
 class userCategoryFragment : Fragment() {
 
-    lateinit var binding: FragmentCategoryBinding
     var categoryList = arrayListOf<DBCategory>()
+    var no = arrayOf(
+        1, 2, 3, 4, 5, 6,7,8,9,10
+    )
+
+    companion object{
+
+        lateinit var tbinding: FragmentCategoryBinding
+
+    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentCategoryBinding.inflate(layoutInflater)
+        tbinding = FragmentCategoryBinding.inflate(layoutInflater)
 
         readProductData()
 
-        return binding.root
+        return tbinding.root
     }
 
 
@@ -50,8 +59,6 @@ class userCategoryFragment : Fragment() {
 
                     var productData = DBCategory(id, cat)
 
-
-
                     categoryList.add(productData)
                 }
 
@@ -67,10 +74,10 @@ class userCategoryFragment : Fragment() {
 
     private fun setupCategory(categoryList: ArrayList<DBCategory>) {
 
-        var adapter = userCategoryAdpater(activity, categoryList)
+        var adapter = userCategoryAdpater(activity, categoryList,no)
         var layoutManager = LinearLayoutManager(activity)
-        binding.categoryFragmentRecyclerView.adapter = adapter
-        binding.categoryFragmentRecyclerView.layoutManager = layoutManager
+        tbinding.categoryFragmentRecyclerView.adapter = adapter
+        tbinding.categoryFragmentRecyclerView.layoutManager = layoutManager
 
     }
 }

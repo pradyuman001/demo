@@ -22,8 +22,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="?actionBarSize"
-                    android:layout_margin="@dimen/_2sdp">
+                    android:layout_height="?actionBarSize">
 
                     <ImageView
                         android:id="@+id/menuImageView"
@@ -79,12 +78,17 @@
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/categoryRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headerCardView"/>
+
             <RelativeLayout
                 android:id="@+id/imageSliderRelativeLayout"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_120sdp"
-                android:layout_below="@+id/headerCardView"
-                android:layout_marginTop="@dimen/_5sdp">
+                android:layout_below="@+id/categoryRecyclerView">
 
                 <org.imaginativeworld.whynotimagecarousel.ImageCarousel
                     android:id="@+id/carousel"
@@ -102,15 +106,140 @@
 
             </RelativeLayout>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerView1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@id/imageSliderRelativeLayout"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:layout_marginEnd="@dimen/_5sdp"
-                android:layout_marginBottom="@dimen/_5sdp" />
+          <RelativeLayout
+              android:id="@+id/mobileRelativeLayout"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/imageSliderRelativeLayout">
+
+            <TextView
+                  android:id="@+id/mobileHeadingTxt"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Trending Mobiles"
+                  android:layout_margin="@dimen/_5sdp"
+                  android:textSize="@dimen/_12ssp"
+                  android:textColor="@color/black"
+                  android:fontFamily="@font/rubik_regular"/>
+
+              <androidx.recyclerview.widget.RecyclerView
+                  android:id="@+id/recyclerView1"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_below="@id/mobileHeadingTxt"
+                  android:layout_marginStart="@dimen/_5sdp"
+                  android:layout_marginEnd="@dimen/_5sdp"
+                  android:layout_marginBottom="@dimen/_5sdp" />
+
+          </RelativeLayout>
+
+          <RelativeLayout
+              android:id="@+id/earphoneRelativeLayout"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/mobileRelativeLayout">
+
+            <TextView
+                  android:id="@+id/earphoneHeadingTxt"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Trending Earphone"
+                  android:layout_margin="@dimen/_5sdp"
+                  android:textSize="@dimen/_12ssp"
+                  android:textColor="@color/black"
+                  android:fontFamily="@font/rubik_regular"/>
+
+              <androidx.recyclerview.widget.RecyclerView
+                  android:id="@+id/recyclerView2"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_below="@id/earphoneHeadingTxt"
+                  android:layout_marginStart="@dimen/_5sdp"
+                  android:layout_marginEnd="@dimen/_5sdp"
+                  android:layout_marginBottom="@dimen/_5sdp" />
+
+          </RelativeLayout>
+
+          <RelativeLayout
+              android:id="@+id/laptopRelativeLayout"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/earphoneRelativeLayout">
+
+            <TextView
+                  android:id="@+id/laptopHeadingTxt"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Trending LapTop"
+                  android:layout_margin="@dimen/_5sdp"
+                  android:textSize="@dimen/_12ssp"
+                  android:textColor="@color/black"
+                  android:fontFamily="@font/rubik_regular"/>
+
+              <androidx.recyclerview.widget.RecyclerView
+                  android:id="@+id/recyclerView3"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_below="@id/laptopHeadingTxt"
+                  android:layout_marginStart="@dimen/_5sdp"
+                  android:layout_marginEnd="@dimen/_5sdp"
+                  android:layout_marginBottom="@dimen/_5sdp" />
+
+          </RelativeLayout>
+
+          <RelativeLayout
+              android:id="@+id/fashionRelativeLayout"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/laptopRelativeLayout">
+
+            <TextView
+                  android:id="@+id/fashionHeadingTxt"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Trending Fashion"
+                  android:layout_margin="@dimen/_5sdp"
+                  android:textSize="@dimen/_12ssp"
+                  android:textColor="@color/black"
+                  android:fontFamily="@font/rubik_regular"/>
+
+              <androidx.recyclerview.widget.RecyclerView
+                  android:id="@+id/recyclerView4"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_below="@id/fashionHeadingTxt"
+                  android:layout_marginStart="@dimen/_5sdp"
+                  android:layout_marginEnd="@dimen/_5sdp"
+                  android:layout_marginBottom="@dimen/_5sdp" />
+
+          </RelativeLayout>
+
+          <RelativeLayout
+              android:id="@+id/beautyRelativeLayout"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/fashionRelativeLayout">
+
+            <TextView
+                  android:id="@+id/beautyHeadingTxt"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Trending Beauty"
+                  android:layout_margin="@dimen/_5sdp"
+                  android:textSize="@dimen/_12ssp"
+                  android:textColor="@color/black"
+                  android:fontFamily="@font/rubik_regular"/>
+
+              <androidx.recyclerview.widget.RecyclerView
+                  android:id="@+id/recyclerView5"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_below="@id/beautyHeadingTxt"
+                  android:layout_marginStart="@dimen/_5sdp"
+                  android:layout_marginEnd="@dimen/_5sdp"
+                  android:layout_marginBottom="@dimen/_5sdp" />
+
+          </RelativeLayout>
 
         </RelativeLayout>
 

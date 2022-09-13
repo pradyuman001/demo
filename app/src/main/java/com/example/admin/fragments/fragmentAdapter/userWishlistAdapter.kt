@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -14,32 +15,23 @@ import com.example.admin.activity.viewProductActivity.view.viewProductActivity
 import com.example.admin.utils.DBReadProduct
 import com.google.android.material.card.MaterialCardView
 
-class userDataAdapter(
-    val activity: FragmentActivity?,
-    val productList: ArrayList<DBReadProduct>
-) :
-
-    RecyclerView.Adapter<ViewData>() {
-
+class wishListAdapter(val activity: FragmentActivity?, val productList: ArrayList<DBReadProduct>) : RecyclerView.Adapter<wishListAdapter.ViewData>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewData {
-        var view = LayoutInflater.from(activity).inflate(R.layout.user_product_item, parent, false)
+        var view = LayoutInflater.from(parent.context).inflate(R.layout.category_filter_item,parent,false)
         return ViewData(view)
     }
 
     override fun onBindViewHolder(holder: ViewData, position: Int) {
-
-        holder.productNameTxt.setText(productList[position].pname)
-        holder.productPriceTxt.setText(productList[position].pprice)
-        holder.productDiscountTxt.setText(productList[position].pdis)
-        Glide.with(activity!!).load(productList[position].pimage).into(holder.productImg)
-
+        holder.name.setText(productList.get(position).pname)
+        holder.price.setText(productList.get(position).pprice)
+        Glide.with(activity!!).load(productList.get(position).pimage).into(holder.img)
+        holder.discount.setText(productList.get(position).pdis)
 
         holder.cardView.setOnClickListener {
 
             viewProduct(position, activity)
         }
-
     }
 
     private fun viewProduct(position: Int, activity: FragmentActivity) {
@@ -55,18 +47,16 @@ class userDataAdapter(
     }
 
     override fun getItemCount(): Int {
+
         return productList.size
     }
 
+    class ViewData(itemView: View) : RecyclerView.ViewHolder(itemView){
+
+        var name = itemView.findViewById<TextView>(R.id.productNameTxtU)
+        var price = itemView.findViewById<TextView>(R.id.productPriceTxtU)
+        var img = itemView.findViewById<ImageView>(R.id.productImgU)
+        var discount = itemView.findViewById<TextView>(R.id.productDiscountTxtU)
+        var cardView = itemView.findViewById<MaterialCardView>(R.id.cardView)
+    }
 }
-
-class ViewData(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-    var productNameTxt = itemView.findViewById<TextView>(R.id.productNameTxtU)
-    var productPriceTxt = itemView.findViewById<TextView>(R.id.productPriceTxtU)
-    var productDiscountTxt = itemView.findViewById<TextView>(R.id.productDiscountTxtU)
-    var productImg = itemView.findViewById<ImageView>(R.id.productImgU)
-    var cardView = itemView.findViewById<MaterialCardView>(R.id.cardView)
-
-}
-

@@ -8,6 +8,14 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/categoryFragmentRecyclerView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:background="#F1EEEE" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/CategoryProductRvView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_toEndOf="@+id/categoryFragmentRecyclerView" />
 
 </RelativeLayout>
