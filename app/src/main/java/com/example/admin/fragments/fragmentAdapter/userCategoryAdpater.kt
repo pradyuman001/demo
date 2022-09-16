@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.FragmentActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.admin.R
@@ -97,7 +98,7 @@ class userCategoryAdpater(
     private fun setupCategory(categoryList: ArrayList<DBReadProduct>) {
 
         var adapter = categoryAdapter(activity, categoryList)
-        var layoutManager = LinearLayoutManager(activity)
+        var layoutManager = GridLayoutManager(activity,2)
         userCategoryFragment.tbinding.CategoryProductRvView.adapter = adapter
         userCategoryFragment.tbinding.CategoryProductRvView.layoutManager = layoutManager
 

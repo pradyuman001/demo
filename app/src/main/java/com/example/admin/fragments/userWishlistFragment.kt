@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.admin.activity.mainActivity.view.MainActivity
+import com.example.admin.activity.searchActivity.view.searchActivity
 import com.example.admin.databinding.FragmentWishlistBinding
 import com.example.admin.fragments.fragmentAdapter.wishListAdapter
 import com.example.admin.utils.DBReadProduct
@@ -17,7 +18,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
-class wishlistFragment : Fragment() {
+class userWishlistFragment : Fragment() {
 
     lateinit var binding: FragmentWishlistBinding
     val wishList = arrayListOf<DBReadProduct>()
@@ -31,6 +32,7 @@ class wishlistFragment : Fragment() {
 
         readWishListData()
         back()
+        search()
 
         return binding.root
     }
@@ -97,4 +99,11 @@ class wishlistFragment : Fragment() {
 
     }
 
+    private fun search() {
+        binding.searchImageView.setOnClickListener {
+            var intent = Intent(activity, searchActivity::class.java)
+            startActivity(intent)
+
+        }
+    }
 }

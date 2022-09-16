@@ -58,7 +58,7 @@ class insertActivity : AppCompatActivity() {
 
     private fun uploadImage() {
 
-        binding.uploadImage.setOnClickListener {
+        binding.uploadImageButton.setOnClickListener {
 
             var intent = Intent(
                 Intent.ACTION_PICK,

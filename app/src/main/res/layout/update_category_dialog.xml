@@ -11,11 +11,11 @@
             android:id="@+id/categoryTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add Category For Id :- "
-            android:textSize="@dimen/_15sdp"
-            android:fontFamily="@font/rubik_semibold"
             android:layout_marginLeft="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_10sdp"/>
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/nunito_semi_bold"
+            android:text="Add Category For Id :- "
+            android:textSize="@dimen/_15sdp" />
 
         <TextView
             android:id="@+id/categoryNumTxt"
@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_toEndOf="@id/categoryTxt"
-            android:fontFamily="@font/rubik_bold"
+            android:fontFamily="@font/nunito_bold"
             android:text="00"
             android:textColor="@color/black"
             android:textSize="@dimen/_15sdp" />
@@ -32,13 +32,14 @@
             android:id="@+id/categoryIdEditTxt"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_40sdp"
+            android:layout_below="@id/categoryTxt"
             android:layout_marginLeft="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginRight="@dimen/_10sdp"
             android:background="@drawable/custom_edittext"
             android:drawableStart="@drawable/custom_product_icon"
             android:drawablePadding="@dimen/_5sdp"
-            android:fontFamily="@font/rubik_regular"
+            android:fontFamily="@font/nunito_regular"
             android:hint="Category Id"
             android:inputType="number"
             android:maxLength="@integer/material_motion_duration_short_1"
@@ -46,8 +47,7 @@
             android:paddingStart="@dimen/_10sdp"
             android:paddingEnd="@dimen/_10sdp"
             android:textColorHint="#D5DCE8"
-            android:textSize="@dimen/_15ssp"
-            android:layout_below="@id/categoryTxt"/>
+            android:textSize="@dimen/_15ssp" />
 
         <EditText
             android:id="@+id/categoryNameEditTxt"
@@ -60,7 +60,7 @@
             android:background="@drawable/custom_edittext"
             android:drawableStart="@drawable/custom_price_icon"
             android:drawablePadding="@dimen/_5sdp"
-            android:fontFamily="@font/rubik_regular"
+            android:fontFamily="@font/nunito_regular"
             android:hint="Category Name"
             android:inputType="textCapWords"
             android:paddingStart="@dimen/_10sdp"
@@ -75,9 +75,10 @@
             android:layout_below="@+id/categoryNameEditTxt"
             android:layout_centerInParent="true"
             android:layout_marginTop="10dp"
-            android:backgroundTint="#191818"
+            android:backgroundTint="#FEC200"
             android:text="Add"
-            android:textColor="@color/white" />
+            android:fontFamily="@font/nunito_regular"
+            android:textColor="@color/black" />
 
     </RelativeLayout>
 

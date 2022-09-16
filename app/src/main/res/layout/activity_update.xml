@@ -14,7 +14,7 @@
             android:id="@+id/headerLinearLayout"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_42sdp"
-            android:background="#191818"
+            android:background="#FEC200"
             android:orientation="horizontal">
 
             <ImageView
@@ -23,17 +23,18 @@
                 android:layout_height="@dimen/_20sdp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="@dimen/_10sdp"
-                android:src="@drawable/back" />
+                android:src="@drawable/back"
+                app:tint="@color/black"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:fontFamily="@font/rubik_semibold"
+                android:fontFamily="@font/nunito_semi_bold"
                 android:gravity="center"
                 android:layout_marginRight="@dimen/_12sdp"
                 android:text="Update Product"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="@dimen/_15ssp" />
 
 
@@ -50,7 +51,7 @@
             android:background="@drawable/custom_edittext"
             android:drawableStart="@drawable/custom_product_icon"
             android:drawablePadding="@dimen/_5sdp"
-            android:fontFamily="@font/rubik_regular"
+            android:fontFamily="@font/nunito_regular"
             android:hint="Product Name"
             android:inputType="textCapWords"
             android:maxLength="@integer/material_motion_duration_short_1"
@@ -71,7 +72,7 @@
             android:background="@drawable/custom_edittext"
             android:drawableStart="@drawable/custom_price_icon"
             android:drawablePadding="@dimen/_5sdp"
-            android:fontFamily="@font/rubik_regular"
+            android:fontFamily="@font/nunito_regular"
             android:hint="Product Price"
             android:inputType="numberDecimal"
             android:paddingStart="@dimen/_10sdp"
@@ -90,7 +91,7 @@
             android:background="@drawable/custom_edittext"
             android:drawableStart="@drawable/custom_discount_icon"
             android:drawablePadding="@dimen/_5sdp"
-            android:fontFamily="@font/rubik_regular"
+            android:fontFamily="@font/nunito_regular"
             android:hint="Product Discount"
             android:inputType="numberDecimal"
             android:paddingStart="@dimen/_10sdp"
@@ -110,7 +111,7 @@
             android:background="@drawable/custom_edittext"
             android:drawableStart="@drawable/custom_description_icon"
             android:drawablePadding="@dimen/_5sdp"
-            android:fontFamily="@font/rubik_regular"
+            android:fontFamily="@font/nunito_regular"
             android:hint="Product Description"
             android:inputType="textCapWords"
             android:paddingStart="@dimen/_10sdp"
@@ -152,24 +153,50 @@
 
         </FrameLayout>
 
-        <ImageView
-            android:id="@+id/uploadImage"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/uploadImageMaterialCardView"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_200sdp"
+            android:layout_height="@dimen/_180sdp"
             android:layout_below="@+id/productDescriptionEditTxt"
-            android:layout_margin="@dimen/_10sdp"
-            android:src="@drawable/image"/>
+            app:cardCornerRadius="8dp"
+            android:layout_margin="@dimen/_15sdp"
+            app:strokeColor="#E8E4E4"
+            app:strokeWidth="0.8dp">
+
+            <ImageView
+                android:id="@+id/uploadImage"
+                android:layout_width="@dimen/_160sdp"
+                android:layout_height="@dimen/_160sdp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:src="@drawable/image" />
+
+
+            <Button
+                android:id="@+id/uploadImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:fontFamily="@font/nunito_regular"
+                android:text="Upload Image"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.card.MaterialCardView>
 
         <Button
             android:id="@+id/updateButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/uploadImage"
+            android:layout_below="@id/uploadImageMaterialCardView"
             android:layout_centerInParent="true"
             android:layout_marginTop="10dp"
-            android:backgroundTint="#191818"
+            android:backgroundTint="#FEC200"
             android:text="Update"
-            android:textColor="@color/white" />
+            android:fontFamily="@font/nunito_regular"
+            android:textColor="@color/black" />
 
     </RelativeLayout>
 

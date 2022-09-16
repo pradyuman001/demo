@@ -19,7 +19,7 @@
             android:background="@drawable/custom_edittext"
             android:drawableStart="@drawable/custom_email_icon"
             android:drawablePadding="@dimen/_5sdp"
-            android:fontFamily="@font/rubik_regular"
+            android:fontFamily="@font/nunito_regular"
             android:hint="Email Address"
             android:inputType="textEmailAddress"
             android:paddingStart="@dimen/_20sdp"
@@ -39,7 +39,7 @@
             android:background="@drawable/custom_edittext"
             android:drawableStart="@drawable/custom_password_icon"
             android:drawablePadding="@dimen/_5sdp"
-            android:fontFamily="@font/rubik_regular"
+            android:fontFamily="@font/nunito_regular"
             android:hint="Password"
             android:inputType="textPassword"
             android:paddingStart="@dimen/_20sdp"
@@ -56,7 +56,7 @@
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginRight="@dimen/_18sdp"
             android:layout_marginBottom="@dimen/_5sdp"
-            android:fontFamily="@font/rubik_regular"
+            android:fontFamily="@font/nunito_regular"
             android:text="Forgot Password?" />
 
         <Button
@@ -69,9 +69,9 @@
             android:layout_marginTop="@dimen/_5sdp"
             android:layout_marginRight="@dimen/_15sdp"
             android:background="@drawable/custom_button"
-            android:fontFamily="@font/rubik_regular"
+            android:fontFamily="@font/nunito_regular"
             android:text="Log In"
-            android:textColor="@color/white" />
+            android:textColor="@color/black" />
 
     </RelativeLayout>
 

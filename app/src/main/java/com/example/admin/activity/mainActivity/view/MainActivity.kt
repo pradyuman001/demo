@@ -7,12 +7,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.admin.R
 import com.example.admin.activity.cartActivity.view.cartActivity
-import com.example.admin.activity.searchActivity.view.searchActivity
 import com.example.admin.databinding.ActivityMainBinding
 import com.example.admin.fragments.userCategoryFragment
 import com.example.admin.fragments.userHomeFragment
 import com.example.admin.fragments.useraccountFragment
-import com.example.admin.fragments.wishlistFragment
+import com.example.admin.fragments.userWishlistFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,7 +30,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.homeImg -> loadFragment(userHomeFragment())
                 R.id.categoryImg -> loadFragment(userCategoryFragment())
                 R.id.userImg -> loadFragment(useraccountFragment())
-                R.id.wishlistImg -> loadFragment(wishlistFragment())
+                R.id.wishlistImg -> loadFragment(userWishlistFragment())
                 R.id.cartImg -> changeActivity(cartActivity())
             }
             true

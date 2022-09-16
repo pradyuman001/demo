@@ -91,7 +91,7 @@ class updateActivity : AppCompatActivity() {
 
     private fun updateImage() {
 
-        binding.uploadImage.setOnClickListener {
+        binding.uploadImageButton.setOnClickListener {
 
             var intent = Intent(
                 Intent.ACTION_PICK,

@@ -41,7 +41,7 @@
                         android:layout_alignLeft="@+id/menuImageView"
                         android:layout_centerInParent="true"
                         android:layout_marginLeft="@dimen/_25sdp"
-                        android:fontFamily="@font/rubik_regular"
+                        android:fontFamily="@font/nunito_regular"
                         android:text="Quick Shopper"
                         android:textColor="#FEC200"
                         android:textSize="@dimen/_14sdp"
@@ -53,18 +53,8 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
-                        android:layout_marginRight="@dimen/_70sdp"
-                        android:src="@drawable/search_24" />
-
-                    <ImageView
-                        android:id="@+id/wishlistImageView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
                         android:layout_marginRight="@dimen/_40sdp"
-                        android:src="@drawable/heart_24" />
-
+                        android:src="@drawable/search_24" />
 
                     <ImageView
                         android:id="@+id/Notification"
@@ -74,15 +64,15 @@
                         android:layout_marginRight="@dimen/_10sdp"
                         android:src="@drawable/notification" />
 
-
                 </RelativeLayout>
+
             </androidx.cardview.widget.CardView>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/categoryRecyclerView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/headerCardView"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/categoryRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/headerCardView"/>
 
             <RelativeLayout
                 android:id="@+id/imageSliderRelativeLayout"
@@ -120,7 +110,7 @@
                   android:layout_margin="@dimen/_5sdp"
                   android:textSize="@dimen/_12ssp"
                   android:textColor="@color/black"
-                  android:fontFamily="@font/rubik_regular"/>
+                  android:fontFamily="@font/nunito_regular"/>
 
               <androidx.recyclerview.widget.RecyclerView
                   android:id="@+id/recyclerView1"
@@ -147,7 +137,7 @@
                   android:layout_margin="@dimen/_5sdp"
                   android:textSize="@dimen/_12ssp"
                   android:textColor="@color/black"
-                  android:fontFamily="@font/rubik_regular"/>
+                  android:fontFamily="@font/nunito_regular"/>
 
               <androidx.recyclerview.widget.RecyclerView
                   android:id="@+id/recyclerView2"
@@ -174,7 +164,7 @@
                   android:layout_margin="@dimen/_5sdp"
                   android:textSize="@dimen/_12ssp"
                   android:textColor="@color/black"
-                  android:fontFamily="@font/rubik_regular"/>
+                  android:fontFamily="@font/nunito_regular"/>
 
               <androidx.recyclerview.widget.RecyclerView
                   android:id="@+id/recyclerView3"
@@ -201,7 +191,7 @@
                   android:layout_margin="@dimen/_5sdp"
                   android:textSize="@dimen/_12ssp"
                   android:textColor="@color/black"
-                  android:fontFamily="@font/rubik_regular"/>
+                  android:fontFamily="@font/nunito_regular"/>
 
               <androidx.recyclerview.widget.RecyclerView
                   android:id="@+id/recyclerView4"
@@ -228,7 +218,7 @@
                   android:layout_margin="@dimen/_5sdp"
                   android:textSize="@dimen/_12ssp"
                   android:textColor="@color/black"
-                  android:fontFamily="@font/rubik_regular"/>
+                  android:fontFamily="@font/nunito_regular"/>
 
               <androidx.recyclerview.widget.RecyclerView
                   android:id="@+id/recyclerView5"

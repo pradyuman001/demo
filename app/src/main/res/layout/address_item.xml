@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/addressRelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15sdp">
+
+        <TextView
+            android:id="@+id/TypeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_semi_bold"
+            android:text="Home"
+            android:textSize="@dimen/_14sdp" />
+
+        <TextView
+            android:id="@+id/NameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TypeText"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/nunito_semi_bold"
+            android:text="David James"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp" />
+
+        <TextView
+            android:id="@+id/AddressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/NameText"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/nunito_semi_bold"
+            android:text="4517 Washington Ave,Manchera 34955"
+            android:textSize="@dimen/_12sdp" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

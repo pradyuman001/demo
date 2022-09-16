@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:fontFamily="@font/rubik_bold"
+            android:fontFamily="@font/nunito_bold"
             android:text="SIGN IN"
             android:textColor="#FEC200"
             android:textSize="@dimen/_25ssp" />
@@ -41,7 +41,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/_5sdp"
                 android:layout_toEndOf="@+id/errorImage"
-                android:fontFamily="@font/rubik_light"
+                android:fontFamily="@font/nunito_light"
                 android:text="Please Enter Full Name"
                 android:textColor="#FF0000"
                 android:textStyle="bold" />
@@ -59,7 +59,7 @@
             android:background="@drawable/custom_edittext"
             android:drawableStart="@drawable/custom_fullname_icon"
             android:drawablePadding="@dimen/_10sdp"
-            android:fontFamily="@font/rubik_regular"
+            android:fontFamily="@font/nunito_regular"
             android:hint="Full Name"
             android:inputType="textCapWords"
             android:paddingStart="@dimen/_10sdp"
@@ -89,7 +89,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/_5sdp"
                 android:layout_toEndOf="@+id/errorImage2"
-                android:fontFamily="@font/rubik_light"
+                android:fontFamily="@font/nunito_light"
                 android:text="Please Enter User Name"
                 android:textColor="#FF0000"
                 android:textStyle="bold" />
@@ -108,7 +108,7 @@
             android:background="@drawable/custom_edittext"
             android:drawableStart="@drawable/custom_username_icon"
             android:drawablePadding="@dimen/_10sdp"
-            android:fontFamily="@font/rubik_regular"
+            android:fontFamily="@font/nunito_regular"
             android:hint="Username"
             android:inputType="textNoSuggestions"
             android:paddingStart="@dimen/_10sdp"
@@ -138,7 +138,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/_5sdp"
                 android:layout_toEndOf="@+id/errorImage3"
-                android:fontFamily="@font/rubik_light"
+                android:fontFamily="@font/nunito_light"
                 android:text="Please Enter Email Address"
                 android:textColor="#FF0000"
                 android:textStyle="bold" />
@@ -157,7 +157,7 @@
             android:background="@drawable/custom_edittext"
             android:drawableStart="@drawable/custom_email_icon"
             android:drawablePadding="@dimen/_10sdp"
-            android:fontFamily="@font/rubik_regular"
+            android:fontFamily="@font/nunito_regular"
             android:hint="Email Address"
             android:inputType="textEmailAddress"
             android:paddingStart="@dimen/_10sdp"
@@ -187,7 +187,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/_5sdp"
                 android:layout_toEndOf="@+id/errorImage4"
-                android:fontFamily="@font/rubik_light"
+                android:fontFamily="@font/nunito_light"
                 android:text="Please Enter Password"
                 android:textColor="#FF0000"
                 android:textStyle="bold" />
@@ -207,7 +207,7 @@
             android:background="@drawable/custom_edittext"
             android:drawableStart="@drawable/custom_password_icon"
             android:drawablePadding="@dimen/_10sdp"
-            android:fontFamily="@font/rubik_regular"
+            android:fontFamily="@font/nunito_regular"
             android:hint="Password"
             android:inputType="textPassword"
             android:paddingStart="@dimen/_10sdp"
@@ -231,7 +231,7 @@
             android:layout_marginRight="@dimen/_18sdp"
             android:layout_marginBottom="@dimen/_5sdp"
             android:layout_toEndOf="@+id/passwordCheckBox"
-            android:fontFamily="@font/rubik_regular"
+            android:fontFamily="@font/nunito_regular"
             android:text="Show Password" />
 
         <!--android:drawableEnd="@drawable/hide"-->
@@ -246,7 +246,7 @@
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginRight="@dimen/_15sdp"
             android:background="@drawable/custom_button"
-            android:fontFamily="@font/rubik_regular"
+            android:fontFamily="@font/nunito_regular"
             android:text="Sign In"
             android:textColor="@color/black"
             android:textStyle="bold" />
@@ -266,7 +266,7 @@
             android:id="@+id/userTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/rubik_regular"
+            android:fontFamily="@font/nunito_regular"
             android:text="Already have a Account ? "
             android:textSize="@dimen/_12sdp" />
 
@@ -276,7 +276,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/_5sdp"
             android:layout_toEndOf="@+id/userTxt"
-            android:fontFamily="@font/rubik_regular"
+            android:fontFamily="@font/nunito_regular"
             android:text="LOG IN"
             android:textColor="#FEC200"
             android:textSize="@dimen/_12sdp" />

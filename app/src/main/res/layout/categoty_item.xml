@@ -17,17 +17,18 @@
                 android:id="@+id/categoryTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Category"
                 android:layout_centerHorizontal="true"
                 android:layout_marginRight="@dimen/_5sdp"
-                android:textSize="@dimen/_16ssp"/>
+                android:text="Category"
+                android:fontFamily="@font/nunito_regular"
+                android:textSize="@dimen/_16ssp" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_1sdp"
                 android:layout_below="@id/categoryTxt"
                 android:layout_marginTop="@dimen/_5sdp"
-                android:background="@android:color/darker_gray"/>
+                android:background="@android:color/darker_gray" />
 
 
         </RelativeLayout>

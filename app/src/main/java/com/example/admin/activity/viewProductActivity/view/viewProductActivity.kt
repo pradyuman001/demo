@@ -33,11 +33,10 @@ class viewProductActivity : AppCompatActivity() {
 
         wishlist()
 
-        binding.cartButton.setOnClickListener {
+        addToCart()
 
-            addToCart()
+        back()
 
-        }
 
     }
 
@@ -53,15 +52,17 @@ class viewProductActivity : AppCompatActivity() {
 
         Glide.with(this).load(pimage).into(binding.productImg)
         binding.productNameTxt.setText(pname)
+        binding.headingText.setText(pname)
         binding.productPriceTxt.setText(pprice)
-        binding.productDescriptionTxt.setText(pdes)
+        binding.productDetailsTxt.setText(pdes)
         binding.productDiscountTxt.setText(pdis)
+
 
     }
 
     private fun wishlist() {
 
-        binding.wishlistImageView.setOnClickListener {
+       binding.wishlistImageView.setOnClickListener {
 
             var firebaseDatabase = FirebaseDatabase.getInstance()
             var databaseReference = firebaseDatabase.reference
@@ -88,29 +89,43 @@ class viewProductActivity : AppCompatActivity() {
 
     private fun addToCart() {
 
-        var firebaseDatabase = FirebaseDatabase.getInstance()
-        var databaseReference = firebaseDatabase.reference
+        binding.cartButton.setOnClickListener {
 
-        var firebaseAuth = FirebaseAuth.getInstance()
-        var user = firebaseAuth.currentUser
-        var uid = user?.uid
+            var firebaseDatabase = FirebaseDatabase.getInstance()
+            var databaseReference = firebaseDatabase.reference
 
-        var cartData = DBCart(
-            pname.toString(),
-            pprice.toString(),
-            pdes.toString(),
-            pcat.toString(),
-            cid!!.toInt(),
-            pimage.toString(),
-            1
+            var firebaseAuth = FirebaseAuth.getInstance()
+            var user = firebaseAuth.currentUser
+            var uid = user?.uid
 
-        )
+            var cartData = DBCart(
+                pname.toString(),
+                pprice.toString(),
+                pdes.toString(),
+                pcat.toString(),
+                cid!!.toInt(),
+                pimage.toString(),
+                1
 
-        databaseReference.child("Cart").child(uid.toString()).push().setValue(cartData)
+            )
 
-        var intent = Intent(this, cartActivity::class.java)
-        startActivity(intent)
+            databaseReference.child("Cart").child(uid.toString()).push().setValue(cartData)
 
+            var intent = Intent(this, cartActivity::class.java)
+            startActivity(intent)
+
+        }
 
     }
+
+    private fun back(){
+
+        binding.imageFrameLayout.setOnClickListener {
+
+           onBackPressed()
+
+        }
+
+    }
+
 }

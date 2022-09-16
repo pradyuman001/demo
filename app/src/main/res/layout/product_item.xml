@@ -37,7 +37,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_5sdp"
-                    android:fontFamily="@font/amazon_ember_bold"
+                    android:fontFamily="@font/nunito_bold"
                     android:text="POCO X3 Pro"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_15sdp" />
@@ -49,7 +49,7 @@
                     android:layout_below="@id/productNameTxt"
                     android:layout_marginTop="@dimen/_2sdp"
                     android:layout_marginBottom="@dimen/_10sdp"
-                    android:fontFamily="@font/amazon_ember_medium"
+                    android:fontFamily="@font/nunito_medium"
                     android:text="₹" />
 
                 <TextView
@@ -59,7 +59,7 @@
                     android:layout_below="@id/productNameTxt"
                     android:layout_marginTop="@dimen/_2sdp"
                     android:layout_toEndOf="@+id/rupeesTxt"
-                    android:fontFamily="@font/amazon_ember_medium"
+                    android:fontFamily="@font/nunito_medium"
                     android:text="19000"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_10sdp" />
@@ -79,7 +79,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="@dimen/_5sdp"
-                        android:fontFamily="@font/rubik_medium"
+                        android:fontFamily="@font/nunito_medium"
                         android:text="30"
                         android:textColor="@color/white" />
 
@@ -88,7 +88,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:fontFamily="@font/rubik_bold"
+                        android:fontFamily="@font/nunito_bold"
                         android:text="%"
                         android:textColor="@color/white"
                         android:textStyle="bold" />
@@ -99,7 +99,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="end|center_vertical"
                         android:layout_marginRight="@dimen/_5sdp"
-                        android:fontFamily="@font/rubik_light"
+                        android:fontFamily="@font/nunito_light"
                         android:text="off"
                         android:textColor="@color/white"
                         android:textStyle="bold" />
@@ -114,7 +114,7 @@
                     android:layout_below="@id/productPriceTxt"
                     android:layout_marginTop="@dimen/_5sdp"
                     android:layout_marginRight="@dimen/_5sdp"
-                    android:fontFamily="@font/amazon_ember"
+                    android:fontFamily="@font/nunito_regular"
                     android:text="This smartphone features the Qualcomm Snapdragon 860 for smooth function, 16.94-cm (6.67) FHD+ Display for clear visuals."
                     android:textColor="@color/black"
                     android:textSize="@dimen/_10sdp" />
@@ -127,7 +127,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginTop="@dimen/_2sdp"
                     android:layout_marginRight="@dimen/_10sdp"
-                    android:fontFamily="@font/amazon_ember_medium"
+                    android:fontFamily="@font/nunito_medium"
                     android:text="Mobile"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_10sdp" />
@@ -147,7 +147,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:fontFamily="@font/rubik_regular"
+                        android:fontFamily="@font/nunito_regular"
                         android:text="Delete"
                         android:textColor="#B5FF0000"
                         android:textSize="16dp"
@@ -170,7 +170,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:fontFamily="@font/rubik_regular"
+                        android:fontFamily="@font/nunito_regular"
                         android:text="Edit"
                         android:textColor="#D24CCF15"
                         android:textSize="16dp"
@@ -193,7 +193,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:fontFamily="@font/rubik_regular"
+                        android:fontFamily="@font/nunito_regular"
                         android:text="Cart"
                         android:textColor="#D24CCF15"
                         android:textSize="16dp"

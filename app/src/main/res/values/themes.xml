@@ -24,7 +24,7 @@
     <style name="Theme.Admin.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="NewFontStyle" parent="android:Widget.TextView">
-        <item name="android:fontFamily">@font/rubik_bold</item>
+        <item name="android:fontFamily">@font/nunito_bold</item>
         <item name="android:textSize">@dimen/_9sdp</item>
     </style>
 </resources>

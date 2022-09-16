@@ -1,9 +1,13 @@
 package com.example.admin.activity.cartActivity.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.admin.activity.cartActivity.controller.cartAdapter
 import com.example.admin.databinding.ActivityCartBinding
 import com.example.admin.utils.DBCartProduct
@@ -11,12 +15,17 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import com.example.admin.R
+import com.example.admin.activity.addressActivity.view.addressActivity
+import com.example.admin.activity.cartActivity.controller.addressAdapter
+import com.example.admin.activity.searchActivity.view.searchActivity
+import com.example.admin.utils.DBAddress
 
 
 class cartActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityCartBinding
     val cartList = arrayListOf<DBCartProduct>()
+    var addressList = arrayListOf<DBAddress>()
     var total : Int = 0
 
 
@@ -28,17 +37,19 @@ class cartActivity : AppCompatActivity() {
         readProductData()
 
         buyProduct()
+
+        back()
+
+        search()
+
+        readAddress()
+
     }
 
     private fun buyProduct() {
-        binding.buyButton.setOnClickListener {
-
+        binding.placeOrderButton.setOnClickListener {
 
             bottomNavigation()
-
-//            var intent = Intent(this,billActivity::class.java)
-//            startActivity(intent)
-
         }
     }
 
@@ -104,7 +115,78 @@ class cartActivity : AppCompatActivity() {
 
         dialog.show()
 
+        val btnClose = dialog.findViewById<ImageView>(R.id.CloseBtn)
+        var Addressbtn = dialog.findViewById<TextView>(R.id.AddAddress)
+        var addressRecyclerView = dialog.findViewById<RecyclerView>(R.id.AddressRvSetup)
 
+        var adpater = addressAdapter(this, addressList)
+        var layoutManager = LinearLayoutManager(this)
+        addressRecyclerView?.adapter = adpater
+        addressRecyclerView?.layoutManager = layoutManager
+
+
+        Addressbtn?.setOnClickListener {
+            var intent = Intent(this, addressActivity::class.java)
+            startActivity(intent)
+
+            dialog.dismiss()
+        }
+        btnClose?.setOnClickListener {
+            dialog.dismiss()
+        }
     }
 
+    private fun back() {
+
+        binding.imageFrameLayout.setOnClickListener {
+
+            onBackPressed()
+        }
+    }
+
+    private fun search() {
+        binding.searchImageView.setOnClickListener {
+
+            var intent = Intent(this, searchActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun readAddress(){
+
+        var firebaseDatabase = FirebaseDatabase.getInstance()
+        var databaseReference = firebaseDatabase.reference
+
+        var firebaseAuth = FirebaseAuth.getInstance()
+        var user = firebaseAuth.currentUser
+        var uid = user?.uid.toString()
+
+        databaseReference.child("Address").child(uid).addValueEventListener(object : ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+               addressList.clear()
+
+                for(x in snapshot.children){
+
+                    var name = x.child("name").getValue().toString()
+                    var mobile = x.child("mobile").getValue().toString()
+                    var flatno = x.child("flatno").getValue().toString()
+                    var landmark = x.child("landmark").getValue().toString()
+                    var state = x.child("state").getValue().toString()
+                    var city = x.child("city").getValue().toString()
+                    var pincode = x.child("pincode").getValue().toString()
+                    var location = x.child("location").getValue().toString()
+
+                    var address = DBAddress(name, mobile, flatno, landmark, state, city, pincode, location)
+
+                    addressList.add(address)
+
+                }
+
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+        })
+    }
 }

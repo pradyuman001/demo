@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -104,6 +105,7 @@ class userHomeFragment : Fragment() {
                         var productData =
                             DBReadProduct(id, pname, pprice, pdes, pcat, pimage, key, cid, pdis)
 
+
                         productList.add(productData)
                     }
                     else if(i1 == cid.toInt()){
@@ -111,11 +113,13 @@ class userHomeFragment : Fragment() {
                         var productData =
                             DBReadProduct(id, pname, pprice, pdes, pcat, pimage, key, cid, pdis)
 
+
                         productList2.add(productData)
                     }else if(i2 == cid.toInt()){
 
                         var productData =
                             DBReadProduct(id, pname, pprice, pdes, pcat, pimage, key, cid, pdis)
+
 
                         productList3.add(productData)
                     }else if(i3 == cid.toInt()){
@@ -123,11 +127,13 @@ class userHomeFragment : Fragment() {
                         var productData =
                             DBReadProduct(id, pname, pprice, pdes, pcat, pimage, key, cid, pdis)
 
+
                         productList4.add(productData)
                     }else if(i4 == cid.toInt()){
 
                         var productData =
                             DBReadProduct(id, pname, pprice, pdes, pcat, pimage, key, cid, pdis)
+
 
                         productList5.add(productData)
                     }
@@ -167,17 +173,14 @@ class userHomeFragment : Fragment() {
 
                 for (x in snapshot.children) {
 
-
                     var id = x.child("id").getValue().toString()
                     var cat = x.child("cat").getValue().toString()
-
-
+                    
                     var productData = DBCategory(id, cat)
-
-
-
+                    
                     categoryList.add(productData)
                 }
+
 
                 setCategory(categoryList)
             }
@@ -186,7 +189,6 @@ class userHomeFragment : Fragment() {
 
             }
         })
-
     }
 
     private fun setCategory(categoryList: ArrayList<DBCategory>) {

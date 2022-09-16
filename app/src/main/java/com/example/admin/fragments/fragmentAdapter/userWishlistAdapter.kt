@@ -18,7 +18,7 @@ import com.google.android.material.card.MaterialCardView
 class wishListAdapter(val activity: FragmentActivity?, val productList: ArrayList<DBReadProduct>) : RecyclerView.Adapter<wishListAdapter.ViewData>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewData {
-        var view = LayoutInflater.from(parent.context).inflate(R.layout.category_filter_item,parent,false)
+        var view = LayoutInflater.from(parent.context).inflate(R.layout.wishlist_item,parent,false)
         return ViewData(view)
     }
 
@@ -53,10 +53,10 @@ class wishListAdapter(val activity: FragmentActivity?, val productList: ArrayLis
 
     class ViewData(itemView: View) : RecyclerView.ViewHolder(itemView){
 
-        var name = itemView.findViewById<TextView>(R.id.productNameTxtU)
-        var price = itemView.findViewById<TextView>(R.id.productPriceTxtU)
-        var img = itemView.findViewById<ImageView>(R.id.productImgU)
-        var discount = itemView.findViewById<TextView>(R.id.productDiscountTxtU)
-        var cardView = itemView.findViewById<MaterialCardView>(R.id.cardView)
+        var name = itemView.findViewById<TextView>(R.id.productNameTxtW)
+        var price = itemView.findViewById<TextView>(R.id.productPriceTxtW)
+        var img = itemView.findViewById<ImageView>(R.id.productImgW)
+        var discount = itemView.findViewById<TextView>(R.id.productDiscountTxtW)
+        var cardView = itemView.findViewById<MaterialCardView>(R.id.cardViewW)
     }
 }

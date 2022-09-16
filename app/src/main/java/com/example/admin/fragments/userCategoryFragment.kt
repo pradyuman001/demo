@@ -1,11 +1,14 @@
 package com.example.admin.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.admin.activity.mainActivity.view.MainActivity
+import com.example.admin.activity.searchActivity.view.searchActivity
 import com.example.admin.databinding.FragmentCategoryBinding
 import com.example.admin.fragments.fragmentAdapter.userCategoryAdpater
 import com.example.admin.utils.DBCategory
@@ -20,13 +23,10 @@ class userCategoryFragment : Fragment() {
     var no = arrayOf(
         1, 2, 3, 4, 5, 6,7,8,9,10
     )
-
     companion object{
 
         lateinit var tbinding: FragmentCategoryBinding
-
     }
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,9 +36,31 @@ class userCategoryFragment : Fragment() {
 
         readProductData()
 
+        back()
+
+        search()
+
         return tbinding.root
     }
 
+    private fun back(){
+
+        tbinding.imageFrameLayout.setOnClickListener {
+
+            var intent = Intent(activity, MainActivity::class.java)
+            startActivity(intent)
+
+        }
+
+    }
+
+    private fun search() {
+        tbinding.searchImageView.setOnClickListener {
+            var intent = Intent(activity, searchActivity::class.java)
+            startActivity(intent)
+
+        }
+    }
 
     private fun readProductData() {
 
