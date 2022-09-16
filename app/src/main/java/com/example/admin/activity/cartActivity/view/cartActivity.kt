@@ -131,9 +131,7 @@ class cartActivity : AppCompatActivity() {
 
             dialog.dismiss()
         }
-        btnClose?.setOnClickListener {
-            dialog.dismiss()
-        }
+
     }
 
     private fun back() {
